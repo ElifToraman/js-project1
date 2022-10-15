@@ -1,7 +1,7 @@
 function computerPlay() {
     let choices = ['rock', 'paper', 'scissors'];
-    let result = choices[Math.floor(Math.random() * choices.length)];
-    return result;
+    let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    return computerChoice;
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -43,8 +43,8 @@ function game() {
         const playerSelection= prompt("What is your choice? (you can choose rock, paper, scissors)").toLowerCase();
         const computerSelection = computerPlay();
         console.log("Computer selection is: " + computerSelection + " \nYour selection is: " + playerSelection);
-        const score = playRound(playerSelection, computerSelection);
-        console.log(score);
+        const round = playRound(playerSelection, computerSelection);
+        console.log(round);
     }
     if (playerScore > computerScore) {
         return "You won this game.";
