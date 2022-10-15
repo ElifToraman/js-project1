@@ -51,7 +51,7 @@ function game() {
     } else if (playerScore == computerScore) {
         return "This game is a tie.";
     } else {
-        return "You lose this game.";
+        return "You lost this game.";
     }
 }
 
