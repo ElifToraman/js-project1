@@ -5,25 +5,25 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
+    if (playerSelection == computerSelection) {
         tieScore++; 
         return `It's a tie! You both picked ${playerSelection}`;
-    } else if (playerSelection === "rock" && computerSelection === "scissors") {
+    } else if (playerSelection == "rock" && computerSelection == "scissors") {
         playerScore++; 
         return "You win! Rock beats Scissors";
-    } else if (playerSelection === "paper" && computerSelection === "rock") {
+    } else if (playerSelection == "paper" && computerSelection == "rock") {
         playerScore++; 
         return "You win! Paper beats Rock";
-    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+    } else if (playerSelection == "scissors" && computerSelection == "paper") {
         playerScore++; 
         return "You win! Scissors beats Paper";
-    } else if (playerSelection === "rock" && computerSelection === "paper") {
+    } else if (playerSelection == "rock" && computerSelection == "paper") {
         computerScore++;
         return "You lose! Paper beats Rock";
-    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+    } else if (playerSelection == "paper" && computerSelection == "scissors") {
         computerScore++;
         return "You lose! Scissors beats Paper"
-    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+    } else if (playerSelection == "scissors" && computerSelection == "rock") {
         computerScore++;
         return "You lose! Rock beats Scissors"
     } else if (playerSelection !== "rock" || "scissors" || "paper") {
