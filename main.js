@@ -28,6 +28,7 @@ function playRound(playerSelection, computerSelection) {
         return "You lose! Rock beats Scissors"
     } else if (playerSelection !== "rock" || "scissors" || "paper") {
         alert("Please only enter rock, paper and scissors");
+        return "You entered something other than rock, paper, and scissors";
     } else {
         return "An unexpected error occured";
     }
@@ -39,7 +40,7 @@ let tieScore=0;
 
 function game() {
     for(let i = 0; i < 5; i++) {
-        const playerSelection= prompt("What is your choice?").toLowerCase();
+        const playerSelection= prompt("What is your choice? (you can choose rock, paper, scissors)").toLowerCase();
         const computerSelection = computerPlay();
         console.log("Computer selection is: " + computerSelection + " \nYour selection is: " + playerSelection);
         const score = playRound(playerSelection, computerSelection);
