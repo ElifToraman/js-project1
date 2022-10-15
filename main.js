@@ -8,24 +8,14 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         tieScore++; 
         return `It's a tie! You both picked ${playerSelection}`;
-    } else if (playerSelection == "rock" && computerSelection == "scissors") {
+    } else if (playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "paper" && computerSelection == "rock"||  
+        playerSelection == "scissors" && computerSelection == "paper") {
         playerScore++; 
-        return "You win! Rock beats Scissors";
-    } else if (playerSelection == "paper" && computerSelection == "rock") {
-        playerScore++; 
-        return "You win! Paper beats Rock";
-    } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        playerScore++; 
-        return "You win! Scissors beats Paper";
-    } else if (playerSelection == "rock" && computerSelection == "paper") {
+        return "You win!";
+    } else if (playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors" || 
+        playerSelection == "scissors" && computerSelection == "rock") {
         computerScore++;
-        return "You lose! Paper beats Rock";
-    } else if (playerSelection == "paper" && computerSelection == "scissors") {
-        computerScore++;
-        return "You lose! Scissors beats Paper"
-    } else if (playerSelection == "scissors" && computerSelection == "rock") {
-        computerScore++;
-        return "You lose! Rock beats Scissors"
+        return "You lose!";
     } else if (playerSelection !== "rock" || "scissors" || "paper") {
         alert("Please only enter rock, paper and scissors");
         return "You entered something other than rock, paper, and scissors";
