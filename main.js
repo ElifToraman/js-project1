@@ -8,7 +8,7 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         tieScore++; 
         return `It's a tie! You both picked ${playerSelection}`;
-    } else if (playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "paper" && computerSelection == "rock"||  
+    } else if (playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "paper" && computerSelection == "rock" ||  
         playerSelection == "scissors" && computerSelection == "paper") {
         playerScore++; 
         return "You win!";
